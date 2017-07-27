@@ -48,8 +48,9 @@ def get_directory_xml():
 </item>
 '''
 
-
+DIR = Namespace('http://reference.data.gov.au/def/ont/directory#')
 SKOS = Namespace('http://www.w3.org/2004/02/skos/core#')
+DCT = Namespace('http://purl.org/dc/terms/')
 
 
 ITEMS_CLASS_URIS = {
@@ -88,6 +89,10 @@ ITEMS_NAMED_INDIVIDUALS_URI_BASES = {
 }
 
 
+EXTRA_NAMED_INDIVIDUALS_URI_BASES = {
+    'portfolio':                    'http://governance.data.gov.au/dataset/directory/portfolio/',
+}
+
 def make_type_count(export_file_name):
     """
     Makes something like this from an export.xml:
@@ -125,11 +130,68 @@ def make_type_count(export_file_name):
     return types
 
 
+'''
+  <item>
+    <content_id>81061</content_id>
+    <unique_record_id>B-00633</unique_record_id>
+    <title>Old Parliament House Advisory Council</title>
+    <type>board</type>
+    <portfolio>78846</portfolio>
+    <board_committee_appointed_by>Ministerial</board_committee_appointed_by>
+    <board_contact_email>artsappointments@pmc.gov.au</board_contact_email>
+    <board_function_category>Advisory Board</board_function_category>
+    <classification>B. Secondary</classification>
+    <creation_date>1997-07-01 00:00:00</creation_date>
+    <description><![CDATA[The Advisory Council provides expert advice to the Minister and the Director on matter relevant to the role, functions and activities of Old Parliament House , either on request from the Minister or Director, or at Council&#039;s instigation.
+
+Old Parliament House provides secretariat support.]]></description>
+    <established_by_under>Principal Body / Management Board / Senior Executive Officer</established_by_under>
+    <max_members>10</max_members>
+    <paid_members>Yes</paid_members>
+    <strat_corp_org_plan>http://static.moadoph.gov.au/ophgovau/media/docs/corporate/13-18-oph-strategic-plan.docx</strat_corp_org_plan>
+    <type_of_body>D. Advisory Body - Policy and Stakeholder Consultation</type_of_body>
+    <updated>10/07/2017 - 9:40am</updated>
+    <website>http://www.moadoph.gov.au</website>
+    <address>
+        <country><![CDATA[AU]]></country>
+        <administrative_area><![CDATA[ACT]]></administrative_area>
+        <locality><![CDATA[Parkes]]></locality>
+        <postal_code><![CDATA[2600]]></postal_code>
+        <thoroughfare><![CDATA[18 King George Terrace]]></thoroughfare>
+    </address>
+  </item>
+'''
 def parse_board(g, item):
-    named_individual_uri = URIRef(ITEMS_NAMED_INDIVIDUALS_URI_BASES[item.type] + item.unique_record_id)#Literal(item.unique_record_id, datatype=XSD.string)
+    named_individual_uri = URIRef(ITEMS_NAMED_INDIVIDUALS_URI_BASES[item.type] + item.unique_record_id)
     for c in ITEMS_CLASS_URIS[item.type]:
         g.add((named_individual_uri, RDF.type, URIRef(c)))
-    g.add((named_individual_uri, SKOS.prefLabel, Literal(item.title, datatype=XSD.string)))
+    g.add((named_individual_uri, SKOS.prefLabel, Literal(item.title, datatype=XSD.string)))  # title
+    g.add((named_individual_uri, DIR.portfolio, URIRef(EXTRA_NAMED_INDIVIDUALS_URI_BASES['portfolio'] + str(item.portfolio))))
+    if item.get('board_function_category') is not None:
+        g.add((
+            named_individual_uri,
+            DIR.function_category,
+            Literal(item.board_function_category, datatype=XSD.string)
+        ))  # board_function_category TODO: change this to a categorised URI
+    g.add((
+        named_individual_uri,
+        DIR.classification,
+        Literal(item.classification, datatype=XSD.string)
+    ))  # classification TODO: use a SKOS collection not DIR.classification
+    created = datetime.strptime(str(item.creation_date), '%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d')
+    g.add((named_individual_uri, DCT.created, Literal(created, datatype=XSD.date)))  # created
+    g.add((
+        named_individual_uri,
+        DCT.description,
+        Literal(item.description, datatype=XSD.string)
+    ))  # description
+    g.add((
+        named_individual_uri,
+        DIR.type_of_body,
+        Literal(item.type_of_body, datatype=XSD.string)
+    ))  # type_of_body
+    created = datetime.strptime(str(item.updated), '%d/%m/%Y - %I:%M%p').strftime('%Y-%m-%d')
+    g.add((named_individual_uri, DCT.modified, Literal(created, datatype=XSD.date)))  # updated
 
 
 def parse_commonwealth_of_parliament(g, item):
@@ -225,7 +287,10 @@ if __name__ == '__main__':
     #get_directory_xml()
 
     g = Graph()
+    g.bind('dir', DIR)
     g.bind('skos', SKOS)
+    g.bind('dct', DCT)
     parse_items(g, 'export_2017-07-26.xml')
     #print(make_type_count('export_2017-07-26.xml'))
-    print(g.serialize(format='turtle').decode('utf-8'))
+    ttl_file = 'export_' + datetime.now().strftime('%Y-%m-%d') + '.ttl'
+    open(ttl_file, 'w').write(g.serialize(format='turtle').decode('utf-8'))
