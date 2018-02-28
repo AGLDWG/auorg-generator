@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+    <item>
+        <content_id>78911</content_id>
+        <unique_record_id>P-00553</unique_record_id>
+        <title>Industry, Innovation and Science</title>
+        <type>portfolio</type>
+        <updated>10/06/2017 - 4:00am</updated>
+    </item>
+    <item>
+        <content_id>80951</content_id>
+        <unique_record_id>O-000887</unique_record_id>
+        <title>Geoscience Australia</title>
+        <type>organisation</type>
+        <portfolio>78911</portfolio>
+        <abn>80 091 799 039</abn>
+        <annual_report_prep_tabled>Yes</annual_report_prep_tabled>
+        <auditor>ANAO</auditor>
+        <asl>600</asl>
+        <classification>A. Principal</classification>
+        <creation_date>1949-07-02 00:00:00</creation_date>
+        <current_budget_total_expenditure>206121</current_budget_total_expenditure>
+        <current_budget_total_appropriations>155790</current_budget_total_appropriations>
+        <description><![CDATA[Geoscience Australia is Australia&#039;s national geoscience agency and exists to apply geoscience to Australia&#039;s most important challenges. Geoscience Australia provides geoscientific advice and information to the Australian Government to support it to deliver its priorities. Geoscientific information is also provided to industry and other stakeholders where it supports achievement of Australian Government objectives.]]></description>
+        <email>sales@ga.gov.au</email>
+        <established_by_under>PGPA Rule (Schedule 1)</established_by_under>
+        <fax_number>(02) 6249 9999</fax_number>
+        <gfs_function>Mining and Mineral Resources (other than fuels) Manufacturing and Construction</gfs_function>
+        <gfs_sector_classification>GGS</gfs_sector_classification>
+        <materiality>Small</materiality>
+        <media_releases>http://www.ga.gov.au/about-us/news-media.html</media_releases>
+        <phone_number>(02) 6249 9111</phone_number>
+        <type_of_body>A. Non Corporate Commonwealth Entity</type_of_body>
+        <updated>20/06/2017 - 4:15pm</updated>
+        <website>http://www.ga.gov.au</website>
+        <address>
+            <country><![CDATA[AU]]></country>
+            <administrative_area><![CDATA[ACT]]></administrative_area>
+            <locality><![CDATA[Symonston]]></locality>
+            <postal_code><![CDATA[2609]]></postal_code>
+            <thoroughfare><![CDATA[Cnr Jerrabomberra Ave and Hindmarsh Drive]]></thoroughfare>
+        </address>
+        <postal_address>GPO Box 378, Canberra ACT 2601</postal_address>
+        <ps_act_body>Yes - Operate with some Independence</ps_act_body>
+    </item>
+    <item>
+        <content_id>149896</content_id>
+        <unique_record_id>O-001532</unique_record_id>
+        <title>Community Safety and Earth Monitoring</title>
+        <type>directory_sub_structure</type>
+        <parent_directory_structure>80951</parent_directory_structure>
+        <parent_organisation>80951</parent_organisation>
+        <updated>20/06/2017 - 4:15pm</updated>
+    </item>
+    <item>
+        <content_id>149901</content_id>
+        <unique_record_id>O-001533</unique_record_id>
+        <title>Corporate Services</title>
+        <type>directory_sub_structure</type>
+        <description><![CDATA[Corporate Services providis a wide range of professional services, policy and advice. Corporate Services delivers and enables delivery of the agencies priorities through a suite of business structures and systems including, Finance, Resources and Property Services; Governance Performance and Planning; Human Resources; Products and Promotion; Information Management.]]></description>
+        <fax_number>(02) 6249 9988</fax_number>
+        <location_address>Cnr Hindmarsh Dr And Jerrabomberra Ave, Symonston, ACT 2609</location_address>
+        <parent_directory_structure>80951</parent_directory_structure>
+        <parent_organisation>80951</parent_organisation>
+        <phone_number>(02) 6249 9411</phone_number>
+        <updated>10/07/2017 - 10:05am</updated>
+        <website>http://www.ga.gov.au</website>
+        <postal_address>GPO Box 378, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>149906</content_id>
+        <unique_record_id>O-001534</unique_record_id>
+        <title>Environmental Geoscience</title>
+        <type>directory_sub_structure</type>
+        <parent_directory_structure>80951</parent_directory_structure>
+        <parent_organisation>80951</parent_organisation>
+        <updated>20/06/2017 - 4:15pm</updated>
+        <postal_address>GPO Box 378, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>149911</content_id>
+        <unique_record_id>O-001535</unique_record_id>
+        <title>Executive</title>
+        <type>directory_sub_structure</type>
+        <parent_directory_structure>80951</parent_directory_structure>
+        <parent_organisation>80951</parent_organisation>
+        <updated>20/06/2017 - 4:15pm</updated>
+    </item>
+    <item>
+        <content_id>149916</content_id>
+        <unique_record_id>O-001536</unique_record_id>
+        <title>ICT Innovation and Services</title>
+        <type>directory_sub_structure</type>
+        <description><![CDATA[ICT Innovation and Services facilitates the agency&#039;s business requirements by providing discoverable and seamlessly accessible first-class geoscientific data, knowledge and information assets that are managed in accordance with government policy and accepted best practice.]]></description>
+        <location_address>Cnr Hindmarsh Dr And Jerrabomberra Ave, Symonston, ACT 2609</location_address>
+        <parent_directory_structure>80951</parent_directory_structure>
+        <parent_organisation>80951</parent_organisation>
+        <updated>10/07/2017 - 10:05am</updated>
+        <website>http://www.ga.gov.au</website>
+        <postal_address>GPO Box 378, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>149921</content_id>
+        <unique_record_id>O-001537</unique_record_id>
+        <title>Resources</title>
+        <type>directory_sub_structure</type>
+        <parent_directory_structure>80951</parent_directory_structure>
+        <parent_organisation>80951</parent_organisation>
+        <updated>10/07/2017 - 10:05am</updated>
+        <website>http://www.ga.gov.au</website>
+        <postal_address>GPO Box 378, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>160531</content_id>
+        <unique_record_id>O-002457</unique_record_id>
+        <title>Community Safety</title>
+        <type>directory_sub_structure</type>
+        <parent_directory_structure>149896</parent_directory_structure>
+        <parent_organisation>80951</parent_organisation>
+        <updated>20/06/2017 - 4:15pm</updated>
+    </item>
+    <item>
+        <content_id>160536</content_id>
+        <unique_record_id>O-002458</unique_record_id>
+        <title>Geodesy and Seismic Monitoring</title>
+        <type>directory_sub_structure</type>
+        <parent_directory_structure>149896</parent_directory_structure>
+        <parent_organisation>80951</parent_organisation>
+        <updated>20/06/2017 - 4:15pm</updated>
+    </item>
+    <item>
+        <content_id>160981</content_id>
+        <unique_record_id>O-002459</unique_record_id>
+        <title>Observatories and Science Support</title>
+        <type>directory_sub_structure</type>
+        <parent_directory_structure>149896</parent_directory_structure>
+        <parent_organisation>80951</parent_organisation>
+        <updated>20/06/2017 - 4:15pm</updated>
+    </item>
+    <item>
+        <content_id>160986</content_id>
+        <unique_record_id>O-002460</unique_record_id>
+        <title>Groundwater</title>
+        <type>directory_sub_structure</type>
+        <parent_directory_structure>149906</parent_directory_structure>
+        <parent_organisation>80951</parent_organisation>
+        <updated>20/06/2017 - 4:15pm</updated>
+    </item>
+    <item>
+        <content_id>160991</content_id>
+        <unique_record_id>O-002461</unique_record_id>
+        <title>National Earth and Marine Observations</title>
+        <type>directory_sub_structure</type>
+        <parent_directory_structure>149906</parent_directory_structure>
+        <parent_organisation>80951</parent_organisation>
+        <updated>20/06/2017 - 4:15pm</updated>
+    </item>
+    <item>
+        <content_id>160996</content_id>
+        <unique_record_id>O-002462</unique_record_id>
+        <title>National Location Information</title>
+        <type>directory_sub_structure</type>
+        <parent_directory_structure>149906</parent_directory_structure>
+        <parent_organisation>80951</parent_organisation>
+        <updated>20/06/2017 - 4:15pm</updated>
+    </item>
+    <item>
+        <content_id>161001</content_id>
+        <unique_record_id>O-002463</unique_record_id>
+        <title>Energy Systems</title>
+        <type>directory_sub_structure</type>
+        <parent_directory_structure>149921</parent_directory_structure>
+        <parent_organisation>80951</parent_organisation>
+        <updated>20/06/2017 - 4:15pm</updated>
+    </item>
+    <item>
+        <content_id>161006</content_id>
+        <unique_record_id>O-002464</unique_record_id>
+        <title>Mineral Systems</title>
+        <type>directory_sub_structure</type>
+        <parent_directory_structure>149921</parent_directory_structure>
+        <parent_organisation>80951</parent_organisation>
+        <updated>20/06/2017 - 4:15pm</updated>
+    </item>
+    <item>
+        <content_id>161011</content_id>
+        <unique_record_id>O-002465</unique_record_id>
+        <title>Resources Advice and Promotion</title>
+        <type>directory_sub_structure</type>
+        <parent_directory_structure>149921</parent_directory_structure>
+        <parent_organisation>80951</parent_organisation>
+        <updated>20/06/2017 - 4:15pm</updated>
+    </item>
+    <item>
+        <content_id>191156</content_id>
+        <unique_record_id>D-01265</unique_record_id>
+        <title>Chief Information Officer</title>
+        <type>directory_role</type>
+        <contact>165436</contact>
+        <email>antony.stinziani@ga.gov.au</email>
+        <is_acting_current>FALSE</is_acting_current>
+        <phone_number>(02) 6249 9435</phone_number>
+        <role_belongs_to>149916</role_belongs_to>
+        <updated>20/06/2017 - 4:15pm</updated>
+        <importance>99</importance>
+        <postal_address>GPO Box 378, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>191161</content_id>
+        <unique_record_id>D-01266</unique_record_id>
+        <title>Chief of Division A/g</title>
+        <type>directory_role</type>
+        <contact>165441</contact>
+        <email>andrew.heap@ga.gov.au</email>
+        <is_acting_current>FALSE</is_acting_current>
+        <phone_number>(02) 6249 9236</phone_number>
+        <role_belongs_to>149921</role_belongs_to>
+        <updated>20/06/2017 - 4:15pm</updated>
+        <importance>99</importance>
+        <postal_address>GPO Box 378, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>195626</content_id>
+        <unique_record_id>D-02168</unique_record_id>
+        <title>General Manager</title>
+        <type>directory_role</type>
+        <contact>170301</contact>
+        <email>leesa.carson@ga.gov.au</email>
+        <is_acting_current>FALSE</is_acting_current>
+        <phone_number>(02) 6249 9872</phone_number>
+        <role_belongs_to>160531</role_belongs_to>
+        <updated>20/06/2017 - 4:15pm</updated>
+        <importance>99</importance>
+        <postal_address>GPO Box 378, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>195631</content_id>
+        <unique_record_id>D-02169</unique_record_id>
+        <title>General Manager</title>
+        <type>directory_role</type>
+        <contact>170306</contact>
+        <email>guy.royal@ga.gov.au</email>
+        <is_acting_current>FALSE</is_acting_current>
+        <phone_number>(02) 6249 9573</phone_number>
+        <role_belongs_to>160981</role_belongs_to>
+        <updated>20/06/2017 - 4:15pm</updated>
+        <importance>99</importance>
+        <postal_address>GPO Box 378, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>195636</content_id>
+        <unique_record_id>D-02170</unique_record_id>
+        <title>A/g Branch Head</title>
+        <type>directory_role</type>
+        <contact>170311</contact>
+        <email>narelle.neumann@ga.gov.au</email>
+        <is_acting_current>FALSE</is_acting_current>
+        <phone_number>(02) 6249 9429</phone_number>
+        <role_belongs_to>160986</role_belongs_to>
+        <updated>20/06/2017 - 4:15pm</updated>
+        <importance>99</importance>
+        <postal_address>GPO Box 378, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>195641</content_id>
+        <unique_record_id>D-02171</unique_record_id>
+        <title>General Manager</title>
+        <type>directory_role</type>
+        <contact>170316</contact>
+        <email>adam.lewis@ga.gov.au</email>
+        <is_acting_current>FALSE</is_acting_current>
+        <phone_number>(02) 6249 9353</phone_number>
+        <role_belongs_to>160991</role_belongs_to>
+        <updated>20/06/2017 - 4:15pm</updated>
+        <importance>99</importance>
+        <postal_address>GPO Box 378, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>195646</content_id>
+        <unique_record_id>D-02172</unique_record_id>
+        <title>General Manager</title>
+        <type>directory_role</type>
+        <contact>170321</contact>
+        <email>simon.costello@ga.gov.au</email>
+        <is_acting_current>FALSE</is_acting_current>
+        <phone_number>(02) 6249 9716</phone_number>
+        <role_belongs_to>160996</role_belongs_to>
+        <updated>20/06/2017 - 4:15pm</updated>
+        <importance>99</importance>
+        <postal_address>GPO Box 378, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>195651</content_id>
+        <unique_record_id>D-02173</unique_record_id>
+        <title>General Manager</title>
+        <type>directory_role</type>
+        <contact>170326</contact>
+        <email>richard.blewett@ga.gov.au</email>
+        <is_acting_current>FALSE</is_acting_current>
+        <phone_number>(02) 6249 9713</phone_number>
+        <role_belongs_to>161006</role_belongs_to>
+        <updated>20/06/2017 - 4:15pm</updated>
+        <importance>99</importance>
+        <postal_address>GPO Box 378, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>195656</content_id>
+        <unique_record_id>D-02174</unique_record_id>
+        <title>General Manager</title>
+        <type>directory_role</type>
+        <contact>170331</contact>
+        <email>andrew.barett@ga.gov.au</email>
+        <is_acting_current>FALSE</is_acting_current>
+        <phone_number>(02) 6249 9502</phone_number>
+        <role_belongs_to>161011</role_belongs_to>
+        <updated>20/06/2017 - 4:15pm</updated>
+        <importance>99</importance>
+        <postal_address>GPO Box 378, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>198146</content_id>
+        <unique_record_id>D-00243</unique_record_id>
+        <title>Assistant Director, Exhibitions and Collections</title>
+        <type>directory_role</type>
+        <contact>168261</contact>
+        <email>adam.worrall@nga.gov.au</email>
+        <fax_number>(02) 6240 6529</fax_number>
+        <is_acting_current>FALSE</is_acting_current>
+        <location_address>Parkes Pl, Parkes ACT 2600</location_address>
+        <phone_number>(02) 6240 6553</phone_number>
+        <role_belongs_to>80071</role_belongs_to>
+        <updated>20/06/2017 - 3:40pm</updated>
+        <importance>99</importance>
+        <postal_address>GPO Box 1150, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>198151</content_id>
+        <unique_record_id>D-00244</unique_record_id>
+        <title>Chief Financial Officer, Governance Operations and Finance</title>
+        <type>directory_role</type>
+        <contact>168266</contact>
+        <email>tony.lawless@nga.gov.au</email>
+        <is_acting_current>FALSE</is_acting_current>
+        <location_address>Parkes Pl, Parkes ACT 2600</location_address>
+        <phone_number>(02) 6240 6712</phone_number>
+        <role_belongs_to>80071</role_belongs_to>
+        <updated>10/07/2017 - 9:45am</updated>
+        <website>http://www.nga.gov.au</website>
+        <importance>99</importance>
+        <postal_address>P O Box 1150, CANBERRA  ACT  2601</postal_address>
+    </item>
+    <item>
+        <content_id>198156</content_id>
+        <unique_record_id>D-00245</unique_record_id>
+        <title>Assistant Director, Engagement and Development</title>
+        <type>directory_role</type>
+        <contact>168271</contact>
+        <email>alison.wright@nga.gov.au</email>
+        <is_acting_current>FALSE</is_acting_current>
+        <location_address>Parkes Place, Parkes ACT 2600</location_address>
+        <phone_number>(02) 6240 6410</phone_number>
+        <role_belongs_to>80071</role_belongs_to>
+        <updated>20/06/2017 - 3:40pm</updated>
+        <importance>99</importance>
+        <postal_address>GPO Box 1150, Canberra  ACT  2601</postal_address>
+    </item>
+    <item>
+        <content_id>198161</content_id>
+        <unique_record_id>D-00246</unique_record_id>
+        <title>Executive Adviser</title>
+        <type>directory_role</type>
+        <contact>168276</contact>
+        <email>helen.gee@nga.gov.au</email>
+        <fax_number>(02) 6240 6426</fax_number>
+        <is_acting_current>FALSE</is_acting_current>
+        <location_address>Parkes Pl, Parkes ACT 2600</location_address>
+        <phone_number>(02) 6240 6590</phone_number>
+        <role_belongs_to>80071</role_belongs_to>
+        <updated>20/06/2017 - 3:40pm</updated>
+        <importance>99</importance>
+        <postal_address>GPO Box 1150, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>198166</content_id>
+        <unique_record_id>D-00247</unique_record_id>
+        <title>Deputy Director, Curatorial, Programs, Corporate and Commercial Services</title>
+        <type>directory_role</type>
+        <contact>168281</contact>
+        <email>kirsten.paisley@nga.gov.au</email>
+        <fax_number>(02) 6270 6411</fax_number>
+        <is_acting_current>FALSE</is_acting_current>
+        <location_address>Parkes Place, Parkes ACT 2600</location_address>
+        <phone_number>(02) 6240 6429</phone_number>
+        <role_belongs_to>80071</role_belongs_to>
+        <updated>20/06/2017 - 3:40pm</updated>
+        <importance>99</importance>
+        <postal_address>GPO Box 1150, Canberra  ACT  2601</postal_address>
+    </item>
+    <item>
+        <content_id>198171</content_id>
+        <unique_record_id>D-00248</unique_record_id>
+        <title>Governance and Planning Manager</title>
+        <type>directory_role</type>
+        <contact>168286</contact>
+        <email>kirsti.partridge@nga.gov.au</email>
+        <fax_number>(02) 6240 6426</fax_number>
+        <is_acting_current>FALSE</is_acting_current>
+        <location_address>Parkes Pl, Parkes ACT 2600</location_address>
+        <phone_number>(02) 6240 6591</phone_number>
+        <role_belongs_to>80071</role_belongs_to>
+        <updated>20/06/2017 - 3:40pm</updated>
+        <importance>99</importance>
+        <postal_address>GPO Box 1150, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>203221</content_id>
+        <unique_record_id>D-04697</unique_record_id>
+        <title>A/g General Manager</title>
+        <type>directory_role</type>
+        <contact>188131</contact>
+        <email>gary.johnston@ga.gov.au</email>
+        <is_acting_current>FALSE</is_acting_current>
+        <phone_number>(02) 6249 9049</phone_number>
+        <role_belongs_to>160536</role_belongs_to>
+        <updated>20/06/2017 - 4:15pm</updated>
+        <importance>99</importance>
+        <postal_address>GPO Box 378, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>207821</content_id>
+        <unique_record_id>D-04517</unique_record_id>
+        <title>A/g Chief Scientist</title>
+        <type>directory_role</type>
+        <contact>187231</contact>
+        <email>jane.coram@ga.gov.au</email>
+        <is_acting_current>FALSE</is_acting_current>
+        <location_address>Corner Hindmarsh Drive And Jerrabomberra Avenue Symonston ACT 2609</location_address>
+        <phone_number>(02) 6249 9894</phone_number>
+        <role_belongs_to>149911</role_belongs_to>
+        <updated>20/06/2017 - 4:15pm</updated>
+        <importance>99</importance>
+        <postal_address>GPO Box 378, Canberra ACT 2601</postal_address>
+    </item>
+    <item>
+        <content_id>212276</content_id>
+        <unique_record_id>D-04153</unique_record_id>
+        <title>Director</title>
+        <type>directory_role</type>
+        <contact>185351</contact>
+        <email>gerard.vaughan@nga.gov.au</email>
+        <fax_number>(02) 6270 6411</fax_number>
+        <is_acting_current>FALSE</is_acting_current>
+        <location_address>Parkes Place, Parkes ACT 2600</location_address>
+        <phone_number>(02) 6240 6590</phone_number>
+        <role_belongs_to>80071</role_belongs_to>
+        <updated>20/06/2017 - 3:40pm</updated>
+        <importance>99</importance>
+        <postal_address>P O Box 1150, CANBERRA  ACT  2601</postal_address>
+    </item>
+</items>
