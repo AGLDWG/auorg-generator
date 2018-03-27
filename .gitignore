@@ -100,3 +100,6 @@ ENV/
 
 # Protege
 catalogue-*
+
+# data dir large files
+data/export*

@@ -13,7 +13,7 @@ URIDs = {}
 def get_directory_xml():
     r = requests.get('https://www.directory.gov.au/sites/default/files/export.xml')
     this_dir = path.dirname(path.realpath(__file__))
-    export_file_name = 'export_' + datetime.now().strftime('%Y-%m-%d') + '.xml'
+    export_file_name = 'export_' + datetime.datetime.now().strftime('%Y-%m-%d') + '.xml'
     open(path.join(this_dir, 'data', export_file_name), 'w').write(r.content.decode('utf-8'))
 
 
@@ -286,12 +286,29 @@ def parse_item(g, item):
         g.add((s_add, RDF.type, VCARD.Work))
         g.add((s_add, RDF.type, VCARD.Address))
         if hasattr(item.address, 'thoroughfare'):
-            g.add((s_add, URIRef('http://www.w3.org/2006/vcard/ns#street-address'), Literal(item.address.thoroughfare, datatype=XSD.string)))
+            g.add((
+                s_add,
+                URIRef('http://www.w3.org/2006/vcard/ns#street-address'),
+                Literal(item.address.thoroughfare, datatype=XSD.string)))
         if hasattr(item.address, 'locality'):
-            g.add((s_add, URIRef('http://www.w3.org/2006/vcard/ns#locality'),       Literal(item.address.locality, datatype=XSD.string)))
+            g.add((
+                s_add,
+                URIRef('http://www.w3.org/2006/vcard/ns#locality'),
+                Literal(item.address.locality, datatype=XSD.string)))
+        if hasattr(item.address, 'administrative_area'):  # State
+            g.add((
+                s_add,
+                URIRef('http://www.w3.org/2006/vcard/ns#region'),
+                Literal(item.address.administrative_area, datatype=XSD.string)))
         if hasattr(item.address, 'postal_code'):
-            g.add((s_add, URIRef('http://www.w3.org/2006/vcard/ns#postal-code'),    Literal(item.address.postal_code, datatype=XSD.string)))
-        g.add((s_add, URIRef('http://www.w3.org/2006/vcard/ns#country-name'),   Literal('Australia', datatype=XSD.string)))
+            g.add((
+                s_add,
+                URIRef('http://www.w3.org/2006/vcard/ns#postal-code'),
+                Literal(item.address.postal_code, datatype=XSD.string)))
+        g.add((
+            s_add,
+            URIRef('http://www.w3.org/2006/vcard/ns#country-name'),
+            Literal('Australia', datatype=XSD.string)))
         g.add((this_uri, ORG.siteAddress, s_add))
 
         add_gnaf_uri(g, item, this_uri)
