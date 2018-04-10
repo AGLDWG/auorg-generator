@@ -281,37 +281,39 @@ def parse_item(g, item):
     '''
     # address
     if hasattr(item, 'address'):
-        # TODO: include state
-        s_add = BNode()  # TODO: replace this with URI from GNAF
-        g.add((s_add, RDF.type, VCARD.Work))
-        g.add((s_add, RDF.type, VCARD.Address))
-        if hasattr(item.address, 'thoroughfare'):
+        address = lookups.ADDRESSES.get(item.unique_record_id)
+        if address is not None:
+            g.add((this_uri, VCARD.hasStreetAddress, URIRef(address)))
+        else:
+            # we don't have a GNAF address so we may as well try and cobble together an ISO19160 VCARD
+            s_add = BNode()  # TODO: replace this with URI from GNAF
+            g.add((s_add, RDF.type, VCARD.Work))
+            g.add((s_add, RDF.type, VCARD.Address))
+            if hasattr(item.address, 'thoroughfare'):
+                g.add((
+                    s_add,
+                    URIRef('http://www.w3.org/2006/vcard/ns#street-address'),
+                    Literal(item.address.thoroughfare, datatype=XSD.string)))
+            if hasattr(item.address, 'locality'):
+                g.add((
+                    s_add,
+                    URIRef('http://www.w3.org/2006/vcard/ns#locality'),
+                    Literal(item.address.locality, datatype=XSD.string)))
+            if hasattr(item.address, 'administrative_area'):  # State
+                g.add((
+                    s_add,
+                    URIRef('http://www.w3.org/2006/vcard/ns#region'),
+                    Literal(item.address.administrative_area, datatype=XSD.string)))
+            if hasattr(item.address, 'postal_code'):
+                g.add((
+                    s_add,
+                    URIRef('http://www.w3.org/2006/vcard/ns#postal-code'),
+                    Literal(item.address.postal_code, datatype=XSD.string)))
             g.add((
                 s_add,
-                URIRef('http://www.w3.org/2006/vcard/ns#street-address'),
-                Literal(item.address.thoroughfare, datatype=XSD.string)))
-        if hasattr(item.address, 'locality'):
-            g.add((
-                s_add,
-                URIRef('http://www.w3.org/2006/vcard/ns#locality'),
-                Literal(item.address.locality, datatype=XSD.string)))
-        if hasattr(item.address, 'administrative_area'):  # State
-            g.add((
-                s_add,
-                URIRef('http://www.w3.org/2006/vcard/ns#region'),
-                Literal(item.address.administrative_area, datatype=XSD.string)))
-        if hasattr(item.address, 'postal_code'):
-            g.add((
-                s_add,
-                URIRef('http://www.w3.org/2006/vcard/ns#postal-code'),
-                Literal(item.address.postal_code, datatype=XSD.string)))
-        g.add((
-            s_add,
-            URIRef('http://www.w3.org/2006/vcard/ns#country-name'),
-            Literal('Australia', datatype=XSD.string)))
-        g.add((this_uri, ORG.siteAddress, s_add))
-
-        add_gnaf_uri(g, item, this_uri)
+                URIRef('http://www.w3.org/2006/vcard/ns#country-name'),
+                Literal('Australia', datatype=XSD.string)))
+            g.add((this_uri, ORG.siteAddress, s_add))
 
     # postal_address TODO: complete
     if hasattr(item, 'postal_address'):
@@ -359,11 +361,6 @@ def parse_item(g, item):
         parse_single_executive_role(g, item, this_uri)
 
 
-def add_gnaf_uri(g, item, this_uri):
-    if item.unique_record_id == 'O-000911':  # DTA
-        g.add((this_uri, VCARD.hasStreetAddress, URIRef('http://gnafld.net/address/GAACT717646497')))
-
-
 def parse_items(g, export_file_name):
     this_dir = path.dirname(path.realpath(__file__))
     export_file_path = path.join(this_dir, 'data', export_file_name)
@@ -379,6 +376,9 @@ def set_up_graph(g):
 if __name__ == '__main__':
     # get the XML from the web
     # get_directory_xml()
+    #
+    # print('got XML')
+    # exit()
 
     # set up the graph
     g = Graph()
@@ -412,10 +412,10 @@ if __name__ == '__main__':
     g.add((AUORG.AustralianDollars, RDFS.label, Literal('Australian Dollars', datatype=XSD.string)))
     g.add((AUORG.AustralianDollars, RDFS.subPropertyOf, XSD.decimal))
 
-           # parse the XML file
-    parse_items(g, 'export_2017-07-26.xml')
+    # parse the XML file
+    parse_items(g, 'export_2018-04-10.xml')
 
     # write the resultant graph to a turtle file
     # ttl_file = 'export_' + datetime.datetime.now().strftime('%Y-%m-%d') + '.ttl'
-    ttl_file = 'export_2017-07-26.ttl'
-    open(ttl_file, 'w').write(g.serialize(format='turtle').decode('utf-8'))
+    ttl_file = 'export_2018-04-10.nt'
+    open(ttl_file, 'w').write(g.serialize(format='nt').decode('utf-8'))
