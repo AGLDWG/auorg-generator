@@ -1,9 +1,0 @@
-<http://governance.linked.data.gov.au/org/O-000887>
-    a org:Organization, augov:NonCorporateCommonwealthEntity ;
-    skos:prefLabel "Geoscience Australia"@en ;
-    dct:created "1949-07-02"^^xsd:date ;
-    ...
-    ns2:homepage <https://www.ga.gov.au> ;
-    foaf:phone <tel:+61-2-6249-9111> ;
-    foaf:mbox <mailto:jwales@bomis.com>
-.

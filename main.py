@@ -16,6 +16,8 @@ def get_directory_xml():
     export_file_name = 'export_' + datetime.datetime.now().strftime('%Y-%m-%d') + '.xml'
     open(path.join(this_dir, 'data', export_file_name), 'w').write(r.content.decode('utf-8'))
 
+    return export_file_name
+
 
 def make_type_count(export_file_name):
     """
@@ -375,9 +377,9 @@ def set_up_graph(g):
 
 if __name__ == '__main__':
     # get the XML from the web
-    # get_directory_xml()
+    xml_file = get_directory_xml()
     #
-    # print('got XML')
+    print('got XML')
     # exit()
 
     # set up the graph
@@ -413,9 +415,10 @@ if __name__ == '__main__':
     g.add((AUORG.AustralianDollars, RDFS.subPropertyOf, XSD.decimal))
 
     # parse the XML file
-    parse_items(g, 'export_2018-04-10.xml')
+    parse_items(g, xml_file)
 
     # write the resultant graph to a turtle file
-    # ttl_file = 'export_' + datetime.datetime.now().strftime('%Y-%m-%d') + '.ttl'
-    ttl_file = 'export_2018-04-10.nt'
+    ttl_file = 'export_' + datetime.datetime.now().strftime('%Y-%m-%d') + '.ttl'
     open(ttl_file, 'w').write(g.serialize(format='nt').decode('utf-8'))
+
+    print('completed NT generation')
