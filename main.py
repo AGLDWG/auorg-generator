@@ -371,34 +371,29 @@ def parse_items(g, export_file_name):
         parse_item(g, item)
 
 
-def set_up_graph(g):
-    pass
-
-
-if __name__ == '__main__':
-    # get the XML from the web
-    xml_file = get_directory_xml()
-    #
-    print('got XML')
-    # exit()
-
-    # set up the graph
+def set_up_graph():
     g = Graph()
-    # set_up_graph(g)
 
     # declare namespaces
+    global SKOS
     SKOS = Namespace('http://www.w3.org/2004/02/skos/core#')
     g.bind('skos', SKOS)
+    global DCT
     DCT = Namespace('http://purl.org/dc/terms/')
     g.bind('dct', DCT)
+    global ORG
     ORG = Namespace('http://www.w3.org/ns/org#')
     g.bind('org', ORG)
+    global PROV
     PROV = Namespace('http://www.w3.org/ns/prov#')
     g.bind('prov', PROV)
+    global FOAF
     FOAF = Namespace('http://xmlns.com/foaf/0.1/')
     g.bind('foaf', FOAF)
+    global VCARD
     VCARD = Namespace('http://www.w3.org/2006/vcard/ns#')
     g.bind('vcard', VCARD)
+    global AUORG
     AUORG = Namespace('http://linked.data.gov.au/def/ont/auorg#')
     g.bind('auorg', AUORG)
 
@@ -414,11 +409,23 @@ if __name__ == '__main__':
     g.add((AUORG.AustralianDollars, RDFS.label, Literal('Australian Dollars', datatype=XSD.string)))
     g.add((AUORG.AustralianDollars, RDFS.subPropertyOf, XSD.decimal))
 
+    return g
+
+
+if __name__ == '__main__':
+    # get the XML from the web
+    xml_file = get_directory_xml()
+    #
+    print('got XML, file ' + xml_file)
+    # exit()
+
+    g = set_up_graph()
+
     # parse the XML file
     parse_items(g, xml_file)
 
     # write the resultant graph to a turtle file
-    ttl_file = 'export_' + datetime.datetime.now().strftime('%Y-%m-%d') + '.ttl'
-    open(ttl_file, 'w').write(g.serialize(format='nt').decode('utf-8'))
+    rdf_file = 'export_' + datetime.datetime.now().strftime('%Y-%m-%d') + '.nt'
+    open(rdf_file, 'w').write(g.serialize(format='nt').decode('utf-8'))
 
     print('completed NT generation')

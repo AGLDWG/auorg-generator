@@ -1,34 +1,34 @@
 ITEMS_CLASS_URIS = {
     'board': [
         'http://www.w3.org/ns/org#Organization',
-        'http://test.inked.data.gov.au/def/auorg#Board'
+        'http://test.linked.data.gov.au/def/auorg#Board'
     ],
     'commonwealth_of_parliament': [
         'http://www.w3.org/ns/org#Organization',
-        'http://test.inked.data.gov.au/def/auorg#CommonwealthOfParliament'
+        'http://test.linked.data.gov.au/def/auorg#CommonwealthOfParliament'
     ],
     'courts': [
         'http://www.w3.org/ns/org#Organization',
-        'http://test.inked.data.gov.au/def/auorg#Court'
+        'http://test.linked.data.gov.au/def/auorg#Court'
     ],
     'directory_role': [
         'http://www.w3.org/ns/org#Organization',
-        'http://test.inked.data.gov.au/def/auorg#DirectoryRole'
+        'http://test.linked.data.gov.au/def/auorg#DirectoryRole'
     ],
     'directory_sub_structure': [
         'http://www.w3.org/ns/org#Organization',
-        'http://test.inked.data.gov.au/def/auorg#DirectorySubStructure'
+        'http://test.linked.data.gov.au/def/auorg#DirectorySubStructure'
     ],
     'enquiry_line': [
-        'http://test.inked.data.gov.au/def/auorg#EnquiryLine'
+        'http://test.linked.data.gov.au/def/auorg#EnquiryLine'
     ],
     'governor_general': [
         'http://xmlns.com/foaf/0.1/Person',
-        'http://test.inked.data.gov.au/def/auorg#GovernorGeneral'
+        'http://test.linked.data.gov.au/def/auorg#GovernorGeneral'
     ],
     'non_board': [
         'http://www.w3.org/ns/org#Organization',
-        'http://test.inked.data.gov.au/def/auorg#NonBoard'
+        'http://test.linked.data.gov.au/def/auorg#NonBoard'
     ],
     'organisation': [
         'http://www.w3.org/ns/org#Organization'
@@ -38,83 +38,83 @@ ITEMS_CLASS_URIS = {
     ],
     'portfolio': [
         'http://www.w3.org/ns/org#Organization',
-        'http://test.inked.data.gov.au/def/auorg#Portfolio'
+        'http://test.linked.data.gov.au/def/auorg#Portfolio'
     ],
     'portfolio_role': [
         'http://www.w3.org/ns/org#Role',
-        'http://test.inked.data.gov.au/def/auorg#PortfolioRole'
+        'http://test.linked.data.gov.au/def/auorg#PortfolioRole'
     ],
     'role': [
         'http://www.w3.org/ns/org#Role'
     ],
     'single_executive_role': [
         'http://www.w3.org/ns/org#Role',
-        'http://test.inked.data.gov.au/def/auorg#SingleExecutiveRole'
+        'http://test.linked.data.gov.au/def/auorg#SingleExecutiveRole'
     ]
 }
 
 
 ITEMS_NAMED_INDIVIDUALS_URI_BASES = {
-    'board':                        'http://test.inked.data.gov.au/dataset/auorg/board/',
-    'commonwealth_of_parliament':   'http://test.inked.data.gov.au/dataset/auorg/commonwealthOfParliament/',
-    'courts':                       'http://test.inked.data.gov.au/dataset/auorg/courts/',
-    'directory_role':               'http://test.inked.data.gov.au/dataset/auorg/directoryRole/',
-    'directory_sub_structure':      'http://test.inked.data.gov.au/dataset/auorg/directorySubStructure/',
-    'enquiry_line':                 'http://test.inked.data.gov.au/dataset/auorg/enquiryLine/',
-    'governor_general':             'http://test.inked.data.gov.au/dataset/auorg/governorGeneral/',
-    'non_board':                    'http://test.inked.data.gov.au/dataset/auorg/nonBoard/',
-    'organisation':                 'http://test.inked.data.gov.au/dataset/auorg/organisation/',
-    'person':                       'http://test.inked.data.gov.au/dataset/auorg/person/',
-    'portfolio':                    'http://test.inked.data.gov.au/dataset/auorg/portfolio/',
-    'portfolio_role':               'http://test.inked.data.gov.au/dataset/auorg/portfolioRole/',
-    'role':                         'http://test.inked.data.gov.au/dataset/auorg/role/',
-    'single_executive_role':        'http://test.inked.data.gov.au/dataset/auorg/singleExecutiveRole/',
+    'board':                        'http://test.linked.data.gov.au/dataset/auorg/board/',
+    'commonwealth_of_parliament':   'http://test.linked.data.gov.au/dataset/auorg/commonwealthOfParliament/',
+    'courts':                       'http://test.linked.data.gov.au/dataset/auorg/courts/',
+    'directory_role':               'http://test.linked.data.gov.au/dataset/auorg/directoryRole/',
+    'directory_sub_structure':      'http://test.linked.data.gov.au/dataset/auorg/directorySubStructure/',
+    'enquiry_line':                 'http://test.linked.data.gov.au/dataset/auorg/enquiryLine/',
+    'governor_general':             'http://test.linked.data.gov.au/dataset/auorg/governorGeneral/',
+    'non_board':                    'http://test.linked.data.gov.au/dataset/auorg/nonBoard/',
+    'organisation':                 'http://test.linked.data.gov.au/dataset/auorg/organisation/',
+    'person':                       'http://test.linked.data.gov.au/dataset/auorg/person/',
+    'portfolio':                    'http://test.linked.data.gov.au/dataset/auorg/portfolio/',
+    'portfolio_role':               'http://test.linked.data.gov.au/dataset/auorg/portfolioRole/',
+    'role':                         'http://test.linked.data.gov.au/dataset/auorg/role/',
+    'single_executive_role':        'http://test.linked.data.gov.au/dataset/auorg/singleExecutiveRole/',
 }
 
 
 CLASSIFICATION = {
-    'A. Principal': 'http://test.inked.data.gov.au/def/auorg#Principal',
-    'B. Secondary': 'http://test.inked.data.gov.au/def/auorg#Secondary',
-    'C. Other': 'http://test.inked.data.gov.au/def/auorg#Other',
-    'X. Internal Management': 'http://test.inked.data.gov.au/def/auorg#',
-    'Y. Non-Government': 'http://test.inked.data.gov.au/def/auorg#'
+    'A. Principal': 'http://test.linked.data.gov.au/def/auorg#Principal',
+    'B. Secondary': 'http://test.linked.data.gov.au/def/auorg#Secondary',
+    'C. Other': 'http://test.linked.data.gov.au/def/auorg#Other',
+    'X. Internal Management': 'http://test.linked.data.gov.au/def/auorg#',
+    'Y. Non-Government': 'http://test.linked.data.gov.au/def/auorg#'
 }
 
 
 TYPE_OF_BODY = {
     'A. Non Corporate Commonwealth Entity':
-        'http://test.inked.data.gov.au/def/auorg#NonCorporateCommonwealthEntity',
+        'http://test.linked.data.gov.au/def/auorg#NonCorporateCommonwealthEntity',
     'B. Corporate Commonwealth Entity':
-        'http://test.inked.data.gov.au/def/auorg#CorporateCommonwealthEntity',
+        'http://test.linked.data.gov.au/def/auorg#CorporateCommonwealthEntity',
     'C. Commonwealth Company':
-        'http://test.inked.data.gov.au/def/auorg#CommonwealthCompany',
+        'http://test.linked.data.gov.au/def/auorg#CommonwealthCompany',
     'D. Advisory Body - Policy and Stakeholder Consultation':
-        'http://test.inked.data.gov.au/def/auorg#AdvisoryBodyPolicyAndStakeholderConsultation',
+        'http://test.linked.data.gov.au/def/auorg#AdvisoryBodyPolicyAndStakeholderConsultation',
     'E. Statutory Office Holder Offices and Committees':
-        'http://test.inked.data.gov.au/def/auorg#StatutoryOfficeHolderOfficesandCommittees',
+        'http://test.linked.data.gov.au/def/auorg#StatutoryOfficeHolderOfficesandCommittees',
     'F. Non Statutory - Function w Separate Branding':
-        'http://test.inked.data.gov.au/def/auorg#NonStatutoryFunctionWithSeparateBranding',
+        'http://test.linked.data.gov.au/def/auorg#NonStatutoryFunctionWithSeparateBranding',
     'G. Ministerial Councils and Related Bodies including those Established by the COAG':
-        'http://test.inked.data.gov.au/def/auorg#MinisterialCouncilsAndRelatedBodiesIncludingThoseEstablishedByTheCOAG',
+        'http://test.linked.data.gov.au/def/auorg#MinisterialCouncilsAndRelatedBodiesIncludingThoseEstablishedByTheCOAG',
     'H. Inter Jurisdictional and International Bodies':
-        'http://test.inked.data.gov.au/def/auorg#InterJurisdictionalAndInternationalBodies',
+        'http://test.linked.data.gov.au/def/auorg#InterJurisdictionalAndInternationalBodies',
     'I. Subsidiaries of Corporate Commonwealth Entities and Commonwealth Companies':
-        'http://test.inked.data.gov.au/def/auorg#'
+        'http://test.linked.data.gov.au/def/auorg#'
         'SubsidiariesOfCorporateCommonwealthEntitiesAndCommonwealthCompanies',
     'J. Joint Ventures, Partnerships and Interests in Other Companies':
-        'http://test.inked.data.gov.au/def/auorg#'
+        'http://test.linked.data.gov.au/def/auorg#'
         'JointVenturesPartnershipsAndInterestsInOtherCompanies',
     'K. National Law Bodies':
-        'http://test.inked.data.gov.au/def/auorg#NationalLawBodies',
+        'http://test.linked.data.gov.au/def/auorg#NationalLawBodies',
     'L. Bodies Linked to the Australian Government through Statutory Contracts Agreements and Delegations':
-        'http://test.inked.data.gov.au/def/auorg#'
+        'http://test.linked.data.gov.au/def/auorg#'
         'BodiesLinkedToTheAustralianGovernmentThroughStatutoryContractsAgreementsAndDelegations',
 
     'R. Management Board':
-        'http://test.inked.data.gov.au/def/auorg#ManagementBoard',
+        'http://test.linked.data.gov.au/def/auorg#ManagementBoard',
     'S. Internal Organisation Structure':
-        'http://test.inked.data.gov.au/def/auorg#InternalOrganisationStructure',
-    'U. Non-Government Body': 'http://test.inked.data.gov.au/def/auorg#NonGovernmentBody'
+        'http://test.linked.data.gov.au/def/auorg#InternalOrganisationStructure',
+    'U. Non-Government Body': 'http://test.linked.data.gov.au/def/auorg#NonGovernmentBody'
 }
 
 
