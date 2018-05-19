@@ -12,7 +12,6 @@ ITEMS_CLASS_URIS = {
         'http://test.linked.data.gov.au/def/auorg#Court'
     ],
     'directory_role': [
-        'http://www.w3.org/ns/org#Organization',
         'http://test.linked.data.gov.au/def/auorg#DirectoryRole'
     ],
     'directory_sub_structure': [

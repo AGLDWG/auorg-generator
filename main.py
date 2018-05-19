@@ -10,7 +10,7 @@ import lookups
 URIDs = {}
 
 
-def get_directory_xml():
+def get_xml_from_dirgovau():
     r = requests.get('https://www.directory.gov.au/sites/default/files/export.xml')
     this_dir = path.dirname(path.realpath(__file__))
     export_file_name = 'export_' + datetime.datetime.now().strftime('%Y-%m-%d') + '.xml'
@@ -94,7 +94,7 @@ def parse_non_board(g, item, this_uri):
 
 
 def parse_organisation(g, item, this_uri):
-    '''
+    """
     <item>
         <content_id>80951</content_id>
         <unique_record_id>O-000887</unique_record_id>
@@ -128,7 +128,11 @@ def parse_organisation(g, item, this_uri):
         <budget_documentation>http://www.ga.gov.au/about/corporate-documents</budget_documentation>
         <strat_corp_org_plan>http://www.ga.gov.au/about/corporate-documents</strat_corp_org_plan>
     </item>
-    '''
+    """
+    # classification
+    # TODO: set up an AUORG type hierarchy but only "A. Principle" in the given data
+    if hasattr(item, 'type_of_body'):
+        g.add((this_uri, RDF.type, URIRef(lookups.TYPE_OF_BODY[item.type_of_body])))
 
 
 def parse_portfolio(g, item, this_uri):
@@ -221,10 +225,6 @@ def parse_item(g, item):
             AUORG.classification,
             Literal(item.classification, datatype=XSD.string)
         ))  # TODO: use a SKOS collection not AUORG.classification
-
-    # classification
-    # TODO: set up an AUORG type hierarchy but only "A. Principle" in the given data
-    g.add((this_uri, RDF.type, URIRef(AUORG.PrincipleOrgansation)))
 
     # creation_date: 1949-07-02 00:00:00
     # TODO: deprecate this value since the current entity, GA, was not created at this date, a precursor was
@@ -414,12 +414,12 @@ def set_up_graph():
 
 if __name__ == '__main__':
     # get the XML from the web
-    xml_file = get_directory_xml()
-    #
+    xml_file = get_xml_from_dirgovau()
     print('got XML, file ' + xml_file)
     # exit()
 
     g = set_up_graph()
+    print('graph set up')
 
     # parse the XML file
     parse_items(g, xml_file)

@@ -8,3 +8,6 @@ echo "completed reloading DB"
 sudo chown -R tomcat8:tomcat8 /etc/fuseki/databases
 sudo service tomcat8 restart
 echo "Tomcat restart complete"
+
+# LOCAL
+# use Fuseki installed at /opt/fuseki
