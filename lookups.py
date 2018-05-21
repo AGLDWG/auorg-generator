@@ -54,7 +54,7 @@ ITEMS_CLASS_URIS = {
 
 
 ITEMS_NAMED_INDIVIDUALS_URI_BASES = {
-    'board':                        'http://test.linked.data.gov.au/dataset/auorg/board/',
+    'board':                        'http://test.linked.data.gov.au/board/',
     'commonwealth_of_parliament':   'http://test.linked.data.gov.au/dataset/auorg/commonwealthOfParliament/',
     'courts':                       'http://test.linked.data.gov.au/dataset/auorg/courts/',
     'directory_role':               'http://test.linked.data.gov.au/dataset/auorg/directoryRole/',
@@ -62,9 +62,9 @@ ITEMS_NAMED_INDIVIDUALS_URI_BASES = {
     'enquiry_line':                 'http://test.linked.data.gov.au/dataset/auorg/enquiryLine/',
     'governor_general':             'http://test.linked.data.gov.au/dataset/auorg/governorGeneral/',
     'non_board':                    'http://test.linked.data.gov.au/dataset/auorg/nonBoard/',
-    'organisation':                 'http://test.linked.data.gov.au/dataset/auorg/organisation/',
-    'person':                       'http://test.linked.data.gov.au/dataset/auorg/person/',
-    'portfolio':                    'http://test.linked.data.gov.au/dataset/auorg/portfolio/',
+    'organisation':                 'http://test.linked.data.gov.au/org/',
+    'person':                       'http://test.linked.data.gov.au/person/',
+    'portfolio':                    'http://test.linked.data.gov.au/portfolio/',
     'portfolio_role':               'http://test.linked.data.gov.au/dataset/auorg/portfolioRole/',
     'role':                         'http://test.linked.data.gov.au/dataset/auorg/role/',
     'single_executive_role':        'http://test.linked.data.gov.au/dataset/auorg/singleExecutiveRole/',
