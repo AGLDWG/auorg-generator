@@ -7,7 +7,7 @@ The code outputs a static text file, in the [turtle format](https://www.w3.org/T
 
 
 ### License
-This code is licensed using the Creative Commons 4.0 International license, see the [LICENSE file](LICENSE) for the deed.
+This code is licensed using the Apache 2.0 license, see the [LICENSE file](LICENSE) for the deed.
 
 
 ### Citation
